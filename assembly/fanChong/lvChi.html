@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		body{
+			background:#b1b1b1
+		}
+		img{
+			height: 42px;
+    		padding-top: 5px;
+		}
+		p{
+			margin:0;
+			color:#007aa2;
+		}
+		.box_lv{
+			height:550px;
+			width:1300px;
+			background:url(../../img/lvback.png);
+			position:relative;
+			top:10px;
+			left:70px;
+			border:1px solid #555;
+			padding:5px;
+		}
+		.box_line{
+			height:50px;
+			width:1297px;
+			background:#b1b1b1;
+			border:1px solid #555;
+			float:left;
+		}
+		.box_line_title{
+			width:319px;
+			float:left;
+			margin-right:5px;
+		}
+		.box_kuang{
+			height:160px;
+			width:319px;
+			float:left;
+			background:#b1b1b1;
+			border:1px solid #555;
+			margin-right:5px;
+			margin-top:5px;
+			margin-bottom:5px;
+		}
+		.box_line_list{
+			display:table;
+			float:left;
+			height:50px;
+			color:#007aa2;
+			padding-left:10px;
+			font-size:12px;
+		}
+		.box_line_list_l{
+			height:20px;
+			width:120px;
+			padding-left:5px;
+			position:relative;
+			display:table;
+		}
+		.title_line{
+			line-height:50px;
+		}
+		.box_line_list_l span{
+			background:#000;
+			color:#33ff00;
+			line-height:20px;
+			font-size:12px;
+			padding:0 5px;
+			float:left;
+			margin-top:2.5px;
+		}
+		.box_line_list_l_span{
+			position:absolute;
+			left:80px;
+		}
+		.box_line_list_l a{
+			display:block;
+			padding:0 10px;
+			line-height:20px;
+			font-size:12px;
+			float:left;
+			margin-top:5px;
+		}
+		.box_kuang_bar{
+			width:132px;
+			float:left;
+			text-align:center;
+			height:inherit;
+			border-right:2.5px solid #000;
+			background:#35d4c5;
+		}
+		.box_kuang_center{
+			width:50px;
+			height:inherit;
+			float:left;
+			text-align:center;
+			
+		}
+	</style>
+</head>
+<body>
+
+<div class="box_lv">
+	<div class="box_line">
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				1#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				2#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				3#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				4#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--上面第一个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	
+	<!--上面第二个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--上面第三个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	
+	<!--上面第四个-->
+	<div class="box_kuang" style="margin-right:0;">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--中间一条上行-->
+	<div class="box_line" style="border-bottom:0 ;">
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--中间一条下行-->
+	<div class="box_line" style="border-top:0;">
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list title_line" style="padding-left:54px;">
+				清水出水阀
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						阀位反馈
+					</span>
+					<a>121</a>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						阀位给定	
+					</span>
+					<a>121</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--下面框第一个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--下面框第二个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--下面框第三个-->
+	<div class="box_kuang">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--下面框第四个-->
+	<div class="box_kuang" style="margin-right:0;">
+		<div class="box_kuang_bar">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进水阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗进气阀</p>
+		</div>
+		<div class="box_kuang_center">
+			<img src="../../img/lvChi.png"/>
+			<p>反冲洗排水阀</p>
+		</div>
+		<div class="box_kuang_bar" style="border-left:2.5px solid #000;border-right:0">
+			<img src="../../img/lvChi.png"/>
+			<p>初溢水排放阀</p>
+			<img src="../../img/lvChi.png"/>
+			<p>排余气电磁阀</p>
+		</div>
+	</div>
+	<!--最下面的一条-->
+	<div class="box_line">
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				1#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				2#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				3#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_line_title">
+			<div class="box_line_list">
+				待滤水进水阀
+			</div>
+			<div class="box_line_list">
+				<img src="../../img/lvChi.png"/>
+			</div>
+			<div class="box_line_list title_line">
+				4#滤池
+			</div>
+			<div class="box_line_list">
+				<div class="box_line_list_l">
+					<span>
+						液位	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						m
+					</span>
+				</div>
+				<div class="box_line_list_l">
+					<span>
+						滤阻	
+					</span>
+					<a>121</a>
+					<span class="box_line_list_l_span">
+						Kpa
+					</span>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

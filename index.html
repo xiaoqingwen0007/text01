@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		body{
+			margin-bottom:0.7rem;
+		}
+	</style>
+</head>
+<body>
+	<!--头部-->
+	<div class="title">
+		<h3>安阳市第八水厂</h3>
+		<div class="title_left">河南智慧水务有限公司</div>
+		<div class="title_center">送水泵房</div>
+	</div>
+	<!--内容-->
+	<div class="ifrem_con">
+		<iframe src="assembly/water/songShui.html" width="100%" height="100%"></iframe>
+	</div>
+	<!--底部-->
+	<div class="footer">
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/index.js" ></script>
+<script type="text/javascript">
+	//通过窗口变化来控制内容大小
+	$("html").css("font-size",$("body").width()/14.40+"px")
+	$(window).resize(function(){
+		$("html").css("font-size",$("body").width()/14.40+"px")
+	})
+	
+</script>

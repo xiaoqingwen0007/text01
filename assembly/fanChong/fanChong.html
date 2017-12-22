@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.iframe_inner{
+			background:url(../../img/fanChong.png) no-repeat 0 50%;
+			background-size:100%;
+		}
+		.iframe_inner span{
+			position:relative;
+			line-height: 0.25rem;
+		}
+		body{
+			background:#b1b1b1
+		}
+		.text_box{
+			display:table;
+			width:1rem;
+			position:absolute;
+		}
+		.text_box span{
+			background:#000;
+			color:#33ff00;
+			line-height:20px;
+			font-size:12px;
+			padding:0 5px;
+			float:left;
+			margin-top:0.1rem;
+		}
+		.text_box a{
+			display:block;
+			line-height:20px;
+			font-size:12px;
+			float:left;
+			margin-top:0.1rem;
+			padding-right:0.1rem;
+		}
+		.text_box_line{
+			height: 0.5rem;
+		    width: 2rem;
+		    line-height: 0.5rem;
+		    position: absolute;
+		    left: 2.5rem;
+		    top: 3rem;
+		}
+		.text_box_line div{
+			height:inherit;
+			width:0.8rem;
+			float:left;
+		}
+		.text_box_line p{
+			margin:0;
+		}
+		.text_box_line span{
+			background:#000;
+			color:#33ff00;
+			display:inline-block;
+			height:0.24rem;
+			float:left;
+			padding:0 5px;
+			margin:0.01rem;
+		}
+		.text_box_line a{
+			float:left;
+			display:inline-block;
+			line-height:20px;
+			font-size:12px;
+			margin-top:0.01rem;
+			padding-left:0.1rem;
+		}
+		.abso span{
+			position:absolute
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<div class="text_box" style="left:2.25rem;top:1.2rem;">
+		<span>1#风机出口压力</span><br>
+		<a>???</a>
+		<span>Kpa</span>
+	</div>
+	<div class="text_box" style="left:3.7rem;top:1.2rem;">
+		<span>2#风机出口压力</span><br>
+		<a>???</a>
+		<span>Kpa</span>
+	</div>
+	<div class="text_box" style="left:9.4rem;top:2rem;width:1.3rem">
+		<span>反冲洗泵出口压力</span><br>
+		<a>???</a>
+		<span>Kpa</span>
+	</div>
+	<div class="text_box_line">
+		<div>
+			风机频率
+		</div>
+		<div style="width:1rem;">
+			<p><span>频率反馈</span><a>??</a></p>
+			<p><span>频率反馈</span><a>??</a></p>
+		</div>
+	</div>
+	<div class="abso">
+		<span style="left:10rem;top:0.6rem;">反冲洗泵</span>
+		<span style="left:9.6rem;top:0.9rem;">1#</span>
+		<span style="left:10rem;top:0.9rem;">2#</span>
+		<span style="left:11.1rem;top:0.9rem;">3#</span>
+		<span style="left:4rem;top:4.4rem;">配电间</span>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
+
+

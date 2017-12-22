@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.iframe_inner{
+			background:url(../img/jiaLv.png) no-repeat 0 50%;
+			background-size:100%;
+		}
+		.iframe_inner span a{
+			height:0.3rem;
+			padding:2px 10px;
+			color:#000;
+			border:1px solid #ccc;
+			background:#fff;
+			margin-left:10px;
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<span style="left:2.08rem;top:3rem">风机状态:<a id="fengType">停止</a></span>
+	<span style="left:4.6rem;top:3rem">1#氯瓶重量(Kg):<a id="kg01"></a></span>
+	<span style="left:7.3rem;top:3rem">2#氯瓶重量(Kg):<a id="kg02"></a></span>
+	<span style="left:10.3rem;top:3rem">碱泵状态:<a id="jianType">停止</a></span>
+	
+	<span style="left:2.6rem;top:1rem">风机</span>
+	<span style="left:5.35rem;top:0.7rem">1#</span>
+	<span style="left:8.05rem;top:0.7rem">2#</span>
+	<span style="left:10.78rem;top:1rem">碱泵</span>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
+

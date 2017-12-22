@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.iframe_inner{
+			background:url(../../img/tiSheng.png) no-repeat 0 50%;
+			background-size:100%;
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<span style="left:5rem;top:1.2rem">进厂水浊度(NTU):<a id="NTU"></a></span>
+	<span style="left:7rem;top:1.2rem">进厂水PH:<a id="PH"></a></span>
+	<span style="left:6rem;top:1.6rem">进厂水温度(℃):<a id="NTU"></a></span>
+	<span style="left:0.3rem;top:1.8rem">提升泵房液位(m):<a id="NTU"></a></span>
+	<span style="left:1.3rem;top:4.3rem">南沉淀后浊度(NTU):<a id="NTU"></a></span>
+	<span style="left:7.3rem;top:4.3rem">北沉淀后浊度(NTU):<a id="NTU"></a></span>
+	<span style="left:4.3rem;top:4.3rem">南沉淀后余氧(mg/l):<a id="NTU"></a></span>
+	<span style="left:10.3rem;top:4.3rem">北沉淀后余氧(mg/l):<a id="NTU"></a></span>
+	<span style="left:2.3rem;top:4.8rem">1#提升泵电流(A):<a id="NTU"></a></span>
+	<span style="left:6rem;top:4.8rem">2#提升泵电流(A):<a id="NTU"></a></span>
+	<span style="left:9.3rem;top:4.8rem">2#提升泵电流(A):<a id="NTU"></a></span>
+	
+	<span style="left:2rem;top:3.1rem">1#泵</span>
+	<span style="left:6.8rem;top:3.1rem">2#泵</span>
+	<span style="left:11.6rem;top:3.1rem">3#泵</span>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
+
+
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/echarts.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/change_time.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.content_qu{
+			width:14rem;
+			height:5.8rem;
+			margin:auto;
+			padding-top:0.2rem;
+		}
+		.bar_left{
+			height:inherit;
+			width:2rem;
+			float:left;
+		}
+		.bar_button_box{
+			padding-top:0.5rem;
+			width:inherit;
+			text-align: center;
+		}
+		.bar_button_box button{
+			margin-top:0.25rem;
+			width:1.5rem;
+			height:0.3rem;
+			border-radius:0;
+		}
+		.bar_right{
+			width:12rem;
+			float:left;
+			height:5.6rem;
+			padding-top:0.2rem;
+			background:#fff;
+		}
+		#Qushi_box{
+			height:inherit;
+			width:inherit;
+		}
+		.table_Qushi{
+			border:1px solid #ccc;
+		}
+		.table_Qushi tr{
+			transition:all .2s;
+		}
+		.table_Qushi tr:nth-child(odd){
+			background:#eee;
+		}
+		.table_Qushi tr:hover{
+			background:#eee;
+		}
+		.table_Qushi tr td{
+			padding:0.05rem 0;
+		}
+	</style>
+</head>
+<body>
+<div class="content_qu">
+	<div class="bar_left">
+		<div class="bar_button_box">
+			<button>液位历史曲线</button>
+			<button>余氯历史曲线</button>
+			<button>浊度历史曲线</button>
+			<button>PH历史曲线</button>
+			<button>温度历史曲线</button>
+			<button>压力历史曲线</button>
+			<button>流量历史曲线</button>
+		</div>
+		
+	</div>
+	<div class="bar_right">
+		<div id="Qushi_box">
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+<script type="text/javascript">
+	//折线图
+	//销毁之前的echarts实例，以免出现dom已存在
+	echarts.dispose(document.getElementById("Qushi_box"));
+	// 基于准备好的dom，初始化echarts实例
+	var Qushi_box = echarts.init(document.getElementById('Qushi_box'));
+	option = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true},
+            dataView:{buttonColor:"green"}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'邮件营销',
+            type:'line',
+            stack: '总量',
+            data:[120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name:'联盟广告',
+            type:'line',
+            stack: '总量',
+            data:[220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name:'视频广告',
+            type:'line',
+            stack: '总量',
+            data:[150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name:'直接访问',
+            type:'line',
+            stack: '总量',
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name:'搜索引擎',
+            type:'line',
+            stack: '总量',
+            data:[820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ],
+    //修改数据视图
+    optionToContent: function(opt) {
+    var axisData = opt.xAxis[0].data;
+    var series = opt.series;
+    var table = '<table style="width:100%;text-align:center" cellspacing="0" cellpadding="0" class="table_Qushi"><tbody><tr>'
+                 + '<td>时间</td>'
+                 //类别
+                 + '<td>' + series[0].name + '</td>'
+                 + '<td>' + series[1].name + '</td>'
+                 + '<td>' + series[2].name + '</td>'
+                 + '<td>' + series[3].name + '</td>'
+                 + '<td>' + series[4].name + '</td>'
+                 + '</tr>';
+    for (var i = 0, l = axisData.length; i < l; i++) {
+        table += '<tr>'
+                 + '<td>' + axisData[i] + '</td>'
+                 //不同的类别对应的数据
+                 + '<td>' + series[0].data[i] + '</td>'
+                 + '<td>' + series[1].data[i] + '</td>'
+                 + '<td>' + series[2].data[i] + '</td>'
+                 + '<td>' + series[3].data[i] + '</td>'
+                 + '<td>' + series[4].data[i] + '</td>'
+                 + '</tr>';
+    }
+    table += '</tbody></table>';
+    return table;
+    }
+};
+Qushi_box.setOption(option);
+</script>

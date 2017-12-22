@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.iframe_inner{
+			background:url(../../img/songShui.png) no-repeat 50%;
+			background-size:100%;
+		}
+		.open02,.open03,.open04{
+			height:0.21rem;
+			width:0.15rem;
+			background:#ecfb0d;
+			position:absolute;
+			top:2.25rem;
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<i class="open02" style="left:2.7rem"></i>
+	<i class="open03" style="left:5.08rem"></i>
+	<i class="open04" style="left:7.45rem"></i>
+	<span style="left:6rem">清水池液位(m):<a id="qingshuichi"></a></span>
+	
+	<span style="left:0.3rem;top:2.7rem">1#泵</span>
+	<span style="left:2.6rem;top:2.7rem">2#泵</span>
+	<span style="left:5rem;top:2.7rem">3#泵</span>
+	<span style="left:7.4rem;top:2.7rem">4#泵</span>
+	<span style="left:9.75rem;top:2.7rem">5#泵</span>
+	<span style="left:12.1rem;top:2.7rem">6#泵</span>
+	
+	<span style="left:1.6rem;top:3.2rem">低压区压力(bar):<a id="lowpressure"></a></span>
+	<span style="left:1rem;top:3.5rem">低压区瞬时流量(m³/h):<a id="outwaterflow"></a></span>
+	<span style="left:0.6rem;top:3.8rem">低压区累计流量(m³/h):<a id="outwatertotleflow"></a></span>
+	
+	<span style="left:3.6rem;top:4rem">出厂水浊度(NTU):<a id="outwaterturbidity"></a></span>
+	<span style="left:5.6rem;top:4rem">出厂PH:<a id="outwaterph"></a></span>
+	<span style="left:7.3rem;top:4rem">出厂水余氯(mg/l):<a id="outwaterchlorin"></a></span>
+	<span style="left:5.4rem;top:4.3rem">出厂水温度(℃):<a id="outwatertemperature"></a></span>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+<script>
+	//插入参数
+	function change(){
+		$.ajax({
+			url:"http://192.168.3.13:8080/anyanwaterfactory//songshuibengroom/getNewSongShuiBeng",
+			type:"post",
+			dataType:"json",
+			success:function(data){
+				$("#lowpressure").text(data.data.lowpressure)
+				$("#outwaterflow").text(data.data.outwaterflow)
+				$("#outwatertotleflow").text(data.data.outwatertotleflow)
+				$("#outwaterturbidity").text(data.data.outwaterturbidity)
+				$("#outwaterph").text(data.data.outwaterph)
+				$("#outwaterchlorin").text(data.data.outwaterchlorin)
+				$("#outwatertemperature").text(data.data.outwatertemperature)
+				change()
+			}
+		})
+	}
+	change()
+</script>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.iframe_inner{
+			background:url(../img/jiaYao.png) no-repeat 0 50%;
+			background-size:100%;
+		}
+		.iframe_inner span a{
+			height:0.3rem;
+			padding:2px 10px;
+			color:#000;
+			border:1px solid #ccc;
+			background:#fff;
+			margin-left:10px;
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<span style="left:7.6rem;top:0.3rem">频率反馈(Hz):<a id="Hz01"></a></span>
+	<span style="left:7.6rem;top:2rem">频率反馈(Hz):<a id="Hz02"></a></span>
+	<span style="left:7.6rem;top:3.8rem">频率反馈(Hz):<a id="Hz03"></a></span>
+	
+	<span style="left:7rem;top:0.7rem">1#计量泵</span>
+	<span style="left:7rem;top:2.5rem">2#计量泵</span>
+	<span style="left:7rem;top:4.3rem">3#计量泵</span>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
+
+

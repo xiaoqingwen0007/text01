@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/jquery-1.7.1.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		table{
+			margin:auto;
+			width:9rem;
+			background:#fff;
+			top:2rem;
+			text-align:center;
+			font-size:0.16rem;
+			border-color:#eee;
+			position:relative;
+		}
+		table tr td{
+			padding:5px 0;
+		}
+		i{
+			display:inline-block;
+			height:20px;
+			width:20px;
+			border-radius:20px;
+			background: #ccc;
+			border:1px solid #555;
+		}
+	</style>
+</head>
+<body>
+<div class="iframe_inner">
+	<table border="1" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td>水泵指示</td>
+				<td>压紧指示</td>
+				<td>取板指示</td>
+				<td>座进指示</td>
+				<td>洗上指示</td>
+				<td>上翻指示</td>
+				<td>斗1上行</td>
+				<td>斗2上行</td>
+			</tr>
+			<tr>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+			</tr>
+			<tr>
+				<td>选料指示</td>
+				<td>退回指示</td>
+				<td>拉板指示</td>
+				<td>座退指示</td>
+				<td>洗下指示</td>
+				<td>下翻指示</td>
+				<td>斗1下行</td>
+				<td>斗2下行</td>
+			</tr>
+			<tr>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+				<td><i></i></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
+
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../../js/echarts.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/change_time.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title></title>
+	<style type="text/css">
+		.box_biao{
+			width:12rem;
+			height:5.8rem;
+			padding-top:0.2rem;
+			margin:auto;
+		}
+		.box_biao_con{
+			width:12rem;
+			height:inherit;
+			overflow: auto;
+		}
+		.table_Qushi{
+			width:100%;
+			text-align: center;
+		}
+		.table_Qushi thead tr{
+			background: #eee;
+		}
+		.table_Qushi tbody tr{
+			transition:all .2s;
+		}
+		.table_Qushi tbody tr:nth-child(odd){
+			background:#fff;
+		}
+		.table_Qushi tbody tr:nth-child(even){
+			background:#eee;
+		}
+		.table_Qushi tbody tr:hover{
+			background:#eee;
+		}
+		.table_Qushi tr td{
+			padding:0.1rem 0;
+		}
+	</style>
+</head>
+<body>
+<div class="box_biao">
+	<div class="box_biao">
+		<table class="table_Qushi" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>报警日期</td>
+					<td>报警时间</td>
+					<td>事件日期</td>
+					<td>事件时间</td>
+					<td>变量名</td>
+					<td>变量描述</td>
+					<td>报警类型</td>
+					<td>报警值/旧值</td>
+					<td>恢复值/新值</td>
+					<td>事件类型</td>	
+				</tr>
+			</thead>
+			<tbody id="table_body">
+				<tr>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+				</tr>
+				<tr>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+					<td>???</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//通过窗口变化来控制内容大小
+$("html").css("font-size",$("body").width()/14.40+"px")
+$(window).resize(function(){
+	$("html").css("font-size",$("body").width()/14.40+"px")
+})
+</script>
+
